@@ -18,6 +18,7 @@ module Bigcommerce
       property :id
 
       property :value
+      property :attribute_value
     end
   end
 end
