@@ -6,7 +6,7 @@ module Bigcommerce
 
         property :code, coerce: String
         property :max_uses, coerce: Integer
-        property :max_uses_per_custromer, coerce: Integer
+        property :max_uses_per_customer, coerce: Integer
 
         property :id, coerce: String
         property :current_uses, coerce: Integer
