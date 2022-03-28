@@ -6,8 +6,7 @@ module Bigcommerce
       property :type_id
       property :subject
       property :body
-      property :translations
-      property :meta
+      property :translations, coerce: Array
     end
   end
 end
