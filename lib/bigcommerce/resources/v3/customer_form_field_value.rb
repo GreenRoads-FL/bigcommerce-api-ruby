@@ -6,7 +6,7 @@ require 'bigcommerce/resources/v3/option_value.rb'
 
 module Bigcommerce
   module V3
-    class CustomerFormFieldValues < Resource
+    class CustomerFormFieldValue < Resource
       include Bigcommerce::ResourceActions.new uri: 'customers/form-field-values', disable: %i[create update destroy]
       include Hashie::Extensions::DeepLocate
       include Hashie::Extensions::DeepFind

@@ -7,7 +7,7 @@ require 'bigcommerce/resources/v3/option_value.rb'
 
 module Bigcommerce
   module V3
-    class CustomerAttributes < Resource
+    class CustomerAttribute < Resource
       include Bigcommerce::ResourceActions.new uri: 'customers/attributes'
       include Hashie::Extensions::DeepLocate
       include Hashie::Extensions::DeepFind
