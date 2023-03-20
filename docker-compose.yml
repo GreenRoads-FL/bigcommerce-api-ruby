@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    image: ruby:3.2-buster
+    environment:
+      - GEM_HOME=/bundle
+      - BUNDLE_PATH=/bundle
+      - HISTFILE=/app/tmp/.bash_history
+    working_dir: /app
+    volumes:
+      - .:/app
+      - bundle:/bundle
+
+volumes:
+  bundle:

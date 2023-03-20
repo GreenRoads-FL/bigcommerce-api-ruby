@@ -31,6 +31,13 @@ bundle install
 bundle exec rake
 ```
 
+##### Bundle Install and Test in Docker
+
+```
+docker compose run --rm app bundle install
+docker compose run --rm app bundle exec rake
+```
+
 #### Installing the gem locally (useful to run examples)
 
 This will build the gem locally into the pkg directory, you can then install it manually by targeting that directory specifically.
