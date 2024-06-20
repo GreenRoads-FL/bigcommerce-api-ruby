@@ -95,6 +95,7 @@ RSpec.describe Bigcommerce::Request do
 
           it 'should build an array of objects' do
             response = double
+            allow(response).to receive(:success?) { true }
             allow(response).to receive(:body) { json }
             objs = @klass_with_init.send(:build_response_object, response)
             expect(objs).to be_kind_of Array
@@ -107,6 +108,7 @@ RSpec.describe Bigcommerce::Request do
           let(:json) { "{\"time\":1426184190}" }
           it 'should build an object' do
             response = double
+            allow(response).to receive(:success?) { true }
             allow(response).to receive(:body) { json }
             objs = @klass_with_init.send(:build_response_object, response)
             expect(objs).to be_kind_of Bigcommerce::DummyClass

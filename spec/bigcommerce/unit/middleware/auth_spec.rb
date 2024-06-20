@@ -6,11 +6,11 @@ RSpec.describe Bigcommerce::Middleware::Auth do
       access_token: 'access_token'
     }
     @api = Bigcommerce::Middleware::Auth.new(app, options)
-    expect(app).to receive(:call).with(
-      request_headers: {
-        'X-Auth-Client' => 'client_id',
-        'X-Auth-Token' => 'access_token'
-      })
+    request_headers = {
+      'X-Auth-Client' => 'client_id',
+      'X-Auth-Token' => 'access_token'
+    }
+    expect(app).to receive(:call).with({ request_headers: })
     @api.call(request_headers: {})
   end
 end

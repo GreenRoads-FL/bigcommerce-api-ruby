@@ -74,7 +74,7 @@ module Bigcommerce
 
       def build_path(path, params = {})
         query_params = params.delete(:query_params)
-        if query_params.present?
+        unless query_params.nil?
           s = query_params.keys.map { |key| "#{key}=#{query_params.fetch(key)}" }.join('&')
           "#{path}?#{s}"
         else

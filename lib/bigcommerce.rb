@@ -1,5 +1,6 @@
 require 'hashie'
-require 'faraday_middleware'
+require 'faraday'
+require 'faraday/gzip'
 require 'bigcommerce/version'
 require 'bigcommerce/config'
 require 'bigcommerce/connection'

@@ -20,8 +20,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
 
-  s.add_dependency 'faraday', '>= 0.11', '< 2'
-  s.add_dependency 'faraday_middleware', '>= 0.11'
+  s.add_dependency 'faraday', '>= 2.0.1'
+  s.add_dependency 'faraday-gzip', '>= 1.0.0'
   s.add_dependency 'hashie', '~> 3.4'
   s.add_dependency 'jwt', '~> 1.5.4'
 end
